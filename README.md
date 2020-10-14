@@ -9,3 +9,10 @@ It features all a average person needs to enjoy content without any unnecesary d
 
 ![A page on r/TIFU opened in OpenSnoo](https://i.ibb.co/4WDTVSY/screenshot-of-usage.jpg)
 ![OpenSnoos desktop icon](https://i.ibb.co/TtBV1Fv/opensnoo-icon-on-desktop.jpg)
+
+# Reccomended subreddits:
+- r/askreddit (app is not desgined for title only so not perfect but still better than the website)
+- r/tifu
+- r/amitheasshole
+- r/entitledparents (uses large text capacity but doesn't have that much in the way of worthwhile comments and is therefore kinda not perfect)
+- r/talesfromtechsupport 
