@@ -8,4 +8,4 @@ When you open the app, you are greeted with the simple charm that can be felt th
 It features all a average person needs to enjoy content without any unnecesary distractions, while also providing a blank canvas for your additions. Want to be able to see how some bots are doing while you are browsing reddit? No problem! Want to make it play the text as audio for the visually impaired, or maybe ocr to read from images if you are feeling a little adventurous? Go right ahead! With this things easy to understand and open source nature, everything is possible!
 
 ![A page on r/TIFU opened in OpenSnoo](https://i.ibb.co/4WDTVSY/screenshot-of-usage.jpg)
-![OpenSnoo's desktop icon](https://i.ibb.co/TtBV1Fv/opensnoo-icon-on-desktop.jpg
+![OpenSnoos desktop icon](https://i.ibb.co/TtBV1Fv/opensnoo-icon-on-desktop.jpg
