@@ -1,8 +1,5 @@
 from tkinter import *
-import prawcore
 import praw
-from tkinter import ttk  
-from tkinter import scrolledtext 
 
 subreddit = "all"
 LoadedPosts = []
@@ -70,6 +67,9 @@ def clicked():
         comments_loaded.append(current_processed_comment)
     
     #instantly load newest comment:
+    current_viewing = comments_loaded.pop(0)
+    comment.configure(text=current_viewing)
+    
     
 
 finished = seperate_for_processing
@@ -77,7 +77,8 @@ btn = Button(window, text="Select subreddit", command=clicked)
 btn.grid(column=2, row=1)
 
 def next_comment():
-    actual_next_comment = comments_loaded.pop(0)
+    current_viewing = comments_loaded.pop(0)
+    comment.configure(text=current_viewing)
 
 next_comment = Button(window, text="Next comment", command=next_comment)
 next_comment.grid(column=4, row=1)
@@ -86,16 +87,26 @@ post_text=Message(window,text = "")
 post_text.grid(row=3,column=0)
 
 def next_post():
-    #load next latest post from list:
+    #load newest submission instantly:
     seperate_for_processing = reddit.submission(id=LoadedPosts.pop(0))
     submission = seperate_for_processing
     postname.configure(text=submission.title)
     post_text.configure(text=submission.selftext)
     link = seperate_for_processing.url
-    ismature.configure(text="Not NSWF")
+    ismature.configure(text="SWF")
     if submission.over_18 == True:
         ismature.configure(text="NSWF")
     author.configure(text='u/' + submission.author.name)
+
+    #load post comments:
+    comments_loaded.clear()
+    for top_level_comment in seperate_for_processing.comments:
+        current_processed_comment = top_level_comment.body
+        comments_loaded.append(current_processed_comment)
+    
+    #instantly load newest comment:
+    current_viewing = comments_loaded.pop(0)
+    comment.configure(text=current_viewing)
 
 
 def copy_post_link():
