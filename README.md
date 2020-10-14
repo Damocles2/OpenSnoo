@@ -16,3 +16,14 @@ It features all a average person needs to enjoy content without any unnecesary d
 - r/amitheasshole
 - r/entitledparents (uses large text capacity but doesn't have that much in the way of worthwhile comments and is therefore kinda not perfect)
 - r/talesfromtechsupport 
+
+# To-do list (pull requests with one of these will be proritized) 
+
+Listed from most important to least important
+- Add comment reply trees
+- Viewable user profiles (in the form of a popup window preferrably)
+- Upvote and downvote support
+- Image support
+- Display post flair
+- Video support
+- Display mod distinguish icon (or label to follow the general style of the app)
