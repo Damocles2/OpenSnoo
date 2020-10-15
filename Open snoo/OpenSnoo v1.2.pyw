@@ -13,14 +13,19 @@ comments_loaded = []
 with open("login_data.json", "r") as handler:
     reddit_logindata = json.load(handler)
 
-client_id = reddit_logindata["client_id"]
-client_secret = reddit_logindata["client_secret"]
-password = reddit_logindata["password"]
-user_agent = reddit_logindata["user_agent"]
-username = reddit_logindata["username"]
+client_id_im = reddit_logindata["client_id"]
+client_secret_im = reddit_logindata["client_secret"]
+password_im = reddit_logindata["password"]
+user_agent_im = reddit_logindata["user_agent"]
+username_im = reddit_logindata["username"]
 
 #put ya login info here
-reddit = praw.Reddit(client_id, client_secret, password, user_agent, username)
+reddit = praw.Reddit(client_id=client_id_im,
+                     client_secret=client_secret_im,
+                     password=password_im,
+                     user_agent=user_agent_im,
+                     username=username_im)
+
 #setup
 window = Tk()
 
