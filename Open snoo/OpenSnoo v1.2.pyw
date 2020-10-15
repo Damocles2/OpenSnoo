@@ -1,6 +1,5 @@
 from tkinter import *
 import praw
-import json
 
 subreddit = "all"
 LoadedPosts = []
@@ -9,18 +8,12 @@ submission = ""
 seperate_for_processing = ''
 comments_loaded = []
 
-#read in login info from json file
-with open("login_data.json", "r") as handler:
-    reddit_logindata = json.load(handler)
-
-client_id = reddit_logindata["client_id"]
-client_secret = reddit_logindata["client_secret"]
-password = reddit_logindata["password"]
-user_agent = reddit_logindata["user_agent"]
-username = reddit_logindata["username"]
-
-#put ya login info here
-reddit = praw.Reddit(client_id, client_secret, password, user_agent, username)
+#login
+reddit = praw.Reddit(client_id='b7XuUgNCFO272g',
+                     client_secret='iK6E7Hh2mSgaubYYKZdWmfizeWQ',
+                     password='laza2008',
+                     user_agent='PARS (Python-based Advanced Reddit Reprimand System) by u/veryinterestingnut',
+                     username='PicoModBot')
 #setup
 window = Tk()
 
