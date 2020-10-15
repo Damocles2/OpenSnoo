@@ -1,5 +1,7 @@
 # OpenSnoo
-OpenSnoo is an extremely minimalist third party reddit browser that is hard coded to have the features you desire through a well-structured python script.
+PS: Make sure to put your api key in the login section at the top before using! Don't have one? Go to https://www.reddit.com/prefs/apps and then and then create new app. Then all you have to do is copy and paste that into the script!
+
+OpenSnoo is an extremely minimalist third party gui for reddit that is hard coded to have the features you desire through a well-structured python script.
 
 While non-programmers can change simple values to select options such as browsing from new or hot with it's comment put throught the code, more experienced userds can completely taylor the experience and add simple code to add new features.
 
