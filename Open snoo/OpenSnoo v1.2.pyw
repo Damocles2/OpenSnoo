@@ -1,6 +1,5 @@
 from tkinter import *
 import praw
-import json
 
 subreddit = "all"
 LoadedPosts = []
@@ -25,6 +24,13 @@ reddit = praw.Reddit(client_id=client_id_im,
                      password=password_im,
                      user_agent=user_agent_im,
                      username=username_im)
+
+#login
+reddit = praw.Reddit(client_id='b7XuUgNCFO272g',
+                     client_secret='iK6E7Hh2mSgaubYYKZdWmfizeWQ',
+                     password='laza2008',
+                     user_agent='PARS (Python-based Advanced Reddit Reprimand System) by u/veryinterestingnut',
+                     username='PicoModBot')
 
 #setup
 window = Tk()
