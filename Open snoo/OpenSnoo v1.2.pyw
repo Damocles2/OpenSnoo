@@ -8,12 +8,12 @@ submission = ""
 seperate_for_processing = ''
 comments_loaded = []
 
-#login
-reddit = praw.Reddit(client_id='b7XuUgNCFO272g',
-                     client_secret='iK6E7Hh2mSgaubYYKZdWmfizeWQ',
-                     password='laza2008',
-                     user_agent='PARS (Python-based Advanced Reddit Reprimand System) by u/veryinterestingnut',
-                     username='PicoModBot')
+#put ya login info here
+reddit = praw.Reddit(client_id=' ',
+                     client_secret=' ',
+                     password=' ',
+                     user_agent=' ',
+                     username=' ')
 #setup
 window = Tk()
 
