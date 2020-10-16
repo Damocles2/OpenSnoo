@@ -1,5 +1,5 @@
 # OpenSnoo
-PS: Make sure to put your api key in the script before using! Don't have one? Go to https://www.reddit.com/prefs/apps and then and then create new app. Then all you have to do is copy and paste that into the top part labeled "login"!
+PS: Make sure to put your api key in the login section at the top before using! Don't have one? Go to https://www.reddit.com/prefs/apps and then and then create new app. Then all you have to do is copy and paste that into the script!
 
 OpenSnoo is an extremely minimalist third party gui for reddit that is hard coded to have the features you desire through a well-structured python script.
 
