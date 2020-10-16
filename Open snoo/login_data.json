@@ -1,7 +1,7 @@
 {
-	"client_id":"b7XuUgNCFO272g",
-	"client_secret":"iK6E7Hh2mSgaubYYKZdWmfizeWQ",
-	"password":"laza2008",
-	"user_agent":"PARS (Python-based Advanced Reddit Reprimand System) by u/veryinterestingnut",
-	"username":"PicoModBot"
+	"client_id":"put your client id here",
+	"client_secret":"put your client secret in here",
+	"password":"ya password goes here",
+	"user_agent":"your user agent goes here",
+	"username":"username of account"
 }
