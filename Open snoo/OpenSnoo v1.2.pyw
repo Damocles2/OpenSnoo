@@ -1,3 +1,10 @@
+#OpenSnoo v1.2 
+#Github release 1.1
+#Special thanks to schulstreamer12 for json support
+
+#Licenced under the AGPL 3.0 licence
+#https://github.com/TryTurningOffAndOnAgain
+
 from tkinter import *
 import praw
 import json
@@ -19,17 +26,17 @@ password_im = reddit_logindata["password"]
 user_agent_im = reddit_logindata["user_agent"]
 username_im = reddit_logindata["username"]
 
-#put ya login info here
+#put ye login info here
 reddit = praw.Reddit(client_id=client_id_im,
                      client_secret=client_secret_im,
                      password=password_im,
                      user_agent=user_agent_im,
                      username=username_im)
 
-#setup
+#setup (feel free to use for setup related stuff its empty)
 window = Tk()
 
-#script
+#script (Main loop)
 window.title("OpenSnoo v1.2 Pre-Alpha release")
 
 lbl = Label(window, text='No subreddit selected', font=("Arial Bold", 50))
