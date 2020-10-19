@@ -1,5 +1,5 @@
 # OpenSnoo
-PS: Make sure to put your api key in the json file before using! Don't have one? Go to https://www.reddit.com/prefs/apps and then and then create new app. Then all you have to do is copy and paste that into the file!
+**PS: Make sure to read the wiki to set it up! This is a hardcoded client and therefore needs to have your user data put in through the script and json file!**
 
 OpenSnoo is an extremely minimalist third party gui for reddit that is hard coded to have the features you desire through a well-structured python script.
 
