@@ -38,10 +38,9 @@ reddit = praw.Reddit(client_id=client_id_im,
 
 #setup (feel free to use for setup related stuff its empty)
 window = Tk()
-
-#script (Main loop)
 window.title("OpenSnoo v1.2 Pre-Alpha release")
 
+#----------------definitions----------------
 def clicked():
 
     #change subreddits and load post ids into list
@@ -106,7 +105,7 @@ def copy_post_link():
     window.clipboard_append(submission.url)
     window.update() # now it stays on the clipboard after the window is closed
 
-
+#----------------gui design----------------
 lbl = Label(window, text='No subreddit selected', font=("Arial Bold", 50))
 lbl.grid(column=0, row=0)
 
