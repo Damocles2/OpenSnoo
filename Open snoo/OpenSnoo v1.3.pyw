@@ -1,13 +1,16 @@
-#OpenSnoo v1.2 
-#Github release 1.1
+#OpenSnoo v1.3 
+#Github release 1.2
 #Special thanks to schulstreamer12 for json support
 
 #Licenced under the AGPL 3.0 licence
 #https://github.com/TryTurningOffAndOnAgain
 
+#V1.3 features: A ton of small bugfixes and major code organisation/logical rearangement
+
 from tkinter import *
 import praw
 import json
+import time
 
 subreddit = "all"
 LoadedPosts = []
@@ -39,24 +42,6 @@ window = Tk()
 #script (Main loop)
 window.title("OpenSnoo v1.2 Pre-Alpha release")
 
-lbl = Label(window, text='No subreddit selected', font=("Arial Bold", 50))
-lbl.grid(column=0, row=0)
-
-postname = Label(window, text='', font=("Arial Bold", 12))
-postname.grid(column=0, row=2)
-
-comment = Message(window, text=' ')
-comment.grid(column=1, row=3)
-
-SubredditInput = Entry(window,width=20)
-SubredditInput.grid(column=1, row=1)
-
-ismature = Label(window, text=' ')
-ismature.grid(column=1, row=2)
-
-author = Label(window, text=' ')
-author.grid(column=2, row=2)
-
 def clicked():
 
     #change subreddits and load post ids into list
@@ -65,7 +50,7 @@ def clicked():
     lbl.configure(text=poop)
     subreddit_true = reddit.subreddit(subreddit)
     LoadedPosts.clear()
-    for submission in subreddit_true.new(limit=45): #set how many posts you want loaded and if you want new or hot here
+    for submission in subreddit_true.hot(limit=45): #set how many posts you want loaded and if you want new or hot here
         LoadedPosts.append(submission.id)
     
     #load newest submission instantly:
@@ -80,30 +65,19 @@ def clicked():
     author.configure(text='u/' + submission.author.name)
 
     #load post comments:
+    comment.configure(text='')
     comments_loaded.clear()
     for top_level_comment in seperate_for_processing.comments:
         current_processed_comment = top_level_comment.body
         comments_loaded.append(current_processed_comment)
     
     #instantly load newest comment:
-    current_viewing = comments_loaded.pop(0)
-    comment.configure(text=current_viewing)
-    
-    
-
-finished = seperate_for_processing
-btn = Button(window, text="Select subreddit", command=clicked)
-btn.grid(column=2, row=1)
+    time.sleep(0.2)
+    next_comment()
 
 def next_comment():
     current_viewing = comments_loaded.pop(0)
     comment.configure(text=current_viewing)
-
-next_comment = Button(window, text="Next comment", command=next_comment)
-next_comment.grid(column=4, row=1)
-
-post_text=Message(window,text = "")
-post_text.grid(row=3,column=0)
 
 def next_post():
     #load newest submission instantly:
@@ -131,6 +105,35 @@ def next_post():
 def copy_post_link():
     window.clipboard_append(submission.url)
     window.update() # now it stays on the clipboard after the window is closed
+
+
+lbl = Label(window, text='No subreddit selected', font=("Arial Bold", 50))
+lbl.grid(column=0, row=0)
+
+postname = Label(window, text='', font=("Arial Bold", 12))
+postname.grid(column=0, row=2)
+
+comment = Message(window, text=' ')
+comment.grid(column=1, row=3)
+
+SubredditInput = Entry(window,width=20)
+SubredditInput.grid(column=1, row=1)
+
+ismature = Label(window, text=' ')
+ismature.grid(column=1, row=2)
+
+author = Label(window, text=' ')
+author.grid(column=2, row=2)
+
+finished = seperate_for_processing
+btn = Button(window, text="Select subreddit", command=clicked)
+btn.grid(column=2, row=1)
+
+next_comment = Button(window, text="Next comment", command=next_comment)
+next_comment.grid(column=4, row=1)
+
+post_text=Message(window,text = "")
+post_text.grid(row=3,column=0)
 
 btn_next = Button(window, text="Next", command=next_post)
 btn_next.grid(column=3, row=1)
