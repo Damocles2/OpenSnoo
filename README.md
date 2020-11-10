@@ -1,6 +1,8 @@
 # OpenSnoo
 **PS: Make sure to read the wiki to set it up! This is a hardcoded client and therefore needs to have your user data put in through the script and json file! https://github.com/TryTurningOffAndOnAgain/OpenSnoo/wiki/How-to-setup-OpenSnoo**
 
+V1.3 was released! All hail the new code and bugfixes!
+
 OpenSnoo is an extremely minimalist third party gui for reddit that is hard coded to have the features you desire through a well-structured python script.
 
 While non-programmers can change simple values to select options such as browsing from new or hot with it's comment put throught the code, more experienced userds can completely taylor the experience and add simple code to add new features.
