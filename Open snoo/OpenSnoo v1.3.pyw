@@ -41,6 +41,10 @@ window = Tk()
 window.title("OpenSnoo v1.2 Pre-Alpha release")
 
 #----------------definitions----------------
+def next_comment():
+    current_viewing = comments_loaded.pop(0)
+    comment.configure(text=current_viewing)
+ 
 def clicked():
 
     #change subreddits and load post ids into list
@@ -74,9 +78,6 @@ def clicked():
     time.sleep(0.2)
     next_comment()
 
-def next_comment():
-    current_viewing = comments_loaded.pop(0)
-    comment.configure(text=current_viewing)
 
 def next_post():
     #load newest submission instantly:
