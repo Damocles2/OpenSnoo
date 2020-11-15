@@ -1,7 +1,7 @@
 # OpenSnoo
 **PS: Make sure to read the wiki to set it up! This is a hardcoded client and therefore needs to have your user data put in through the script and json file! https://github.com/TryTurningOffAndOnAgain/OpenSnoo/wiki/How-to-setup-OpenSnoo**
 
-**Also a bug was found that doesn't automatically load the first comment of the first loaded post when you enter a subreddit. Therefore you need to press "next comment" to view the comments when this occurs**
+**Also a bug was found that doesn't automatically change the first comments on posts and that requires you to press the "Next comment" button*
 
 V1.3 was released! All hail the new code and bugfixes!
 
