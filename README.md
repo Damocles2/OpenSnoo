@@ -1,27 +1,27 @@
 # OpenSnoo
-**PS: Make sure to read the wiki to set it up! This is a hardcoded client and therefore needs to have your user data put in through the script and json file! https://github.com/TryTurningOffAndOnAgain/OpenSnoo/wiki/How-to-setup-OpenSnoo**
+# V2.0 added features:
+- Back buttons for comments and posts**
+- Image support
+- Titles automatically shortenedwith "..." added if they are over 80 characters**
 
-**Also a bug was found that doesn't automatically change the first comments on posts and that requires you to press the "Next comment" button**
+**Minor additions:**
+- Icons added to buttons
+- Fixed comment loading glitch
 
-V1.3 was released! All hail the new code and bugfixes!
+OpenSnoo is an extremely minimalist yet highly advanced reddit client with image suppport, no useless scrolling, 
 
-OpenSnoo is an extremely minimalist third party gui for reddit that is hard coded to have the features you desire through a well-structured python script.
+While non-programmers can change simple values to select options such as browsing from new or hot with it's comment put throught the code, more experienced userds can completely tailor the experience and add simple code to add new features.
 
-While non-programmers can change simple values to select options such as browsing from new or hot with it's comment put throught the code, more experienced userds can completely taylor the experience and add simple code to add new features.
-
-When you open the app, you are greeted with the simple charm that can be felt throught al of the program's 268 lines of python. A simple piece of text to notify you to add your subreddit name and button to familiarize yourself with for later will be the first things you notice, along with a design made specifically for high resolution displays (think 1080p minimum) so that no scrolling is required.
+When you open the app, you are greeted with the simple charm that can be felt throught al of the program's 250 lines of python. A simple piece of text to notify you to add your subreddit name and button to familiarize yourself with for later will be the first things you notice, along with a design made specifically for high resolution displays (think 7200p minimum) so that no scrolling is required.
 
 It features all a average person needs to enjoy content without any unnecesary distractions, while also providing a blank canvas for your additions. Want to be able to see how some bots are doing while you are browsing reddit? No problem! Want to make it play the text as audio for the visually impaired, or maybe ocr to read from images if you are feeling a little adventurous? Go right ahead! With this things easy to understand and open source nature, everything is possible!
 
-![A page on r/TIFU opened in OpenSnoo](https://i.ibb.co/4WDTVSY/screenshot-of-usage.jpg)
+![A meme in r/dankmemes in OpenSnoo](https://i.ibb.co/BZ828Gk/pic-1.jpg)
+![A page on r/TIFU opened in OpenSnoo](https://i.ibb.co/hYsX12d/pic2.jpg)
 ![OpenSnoos desktop icon](https://i.ibb.co/TtBV1Fv/opensnoo-icon-on-desktop.jpg)
 
-# Reccomended subreddits:
-- r/askreddit (app is not desgined for title only so not perfect but still better than the website)
-- r/tifu
-- r/amitheasshole
-- r/entitledparents (uses large text capacity but doesn't have that much in the way of worthwhile comments and is therefore kinda not perfect)
-- r/talesfromtechsupport 
+https://ibb.co/fpmdm9J
+https://ibb.co/NTx1nWN
 
 # To-do list (pull requests with one of these will be proritized) 
 
