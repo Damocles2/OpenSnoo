@@ -8,6 +8,8 @@
 - Icons added to buttons
 - Fixed comment loading glitch
 
+![A meme in r/dankmemes in OpenSnoo](https://i.ibb.co/BZ828Gk/pic-1.jpg)
+
 OpenSnoo is an extremely minimalist yet highly advanced reddit client with image suppport, no useless scrolling, autommatic image resisng and therefore a constant size...etc
 
 While non-programmers can change simple values to select options such as browsing from new or hot with it's comment put throught the code, more experienced userds can completely tailor the experience and add simple code to add new features.
@@ -16,7 +18,6 @@ When you open the app, you are greeted with the simple charm that can be felt th
 
 It features all a average person needs to enjoy content without any unnecesary distractions, while also providing a blank canvas for your additions. Want to be able to see how some bots are doing while you are browsing reddit? No problem! Want to make it play the text as audio for the visually impaired, or maybe ocr to read from images if you are feeling a little adventurous? Go right ahead! With this things easy to understand and open source nature, everything is possible!
 
-![A meme in r/dankmemes in OpenSnoo](https://i.ibb.co/BZ828Gk/pic-1.jpg)
 ![A page on r/TIFU opened in OpenSnoo](https://i.ibb.co/hYsX12d/pic2.jpg)
 ![OpenSnoos desktop icon](https://i.ibb.co/TtBV1Fv/opensnoo-icon-on-desktop.jpg)
 
