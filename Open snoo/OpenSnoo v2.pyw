@@ -35,7 +35,7 @@ current_temporary_cache = ""
 current_comment_location = 0
 #loaded items
 old_comments = []
-size = 300, 300 #max size of image
+size = 400, 400 #max size of image
 img_loaded = False
 run_once = True
 
@@ -193,12 +193,12 @@ if run_once == True:
 if img_loaded == True:
     img = ImageTk.PhotoImage(img)  
 
-canvas = Canvas(window, width=300, height=300)
+canvas = Canvas(window, width=400, height=400)
 canvas.grid(column=0, row=3)
  
 window.imgArea = canvas.create_image(0, 0, anchor='nw')
 
-imagesprite = canvas.create_image(300,300,image=img)
+imagesprite = canvas.create_image(400,400,image=img)
 
 lbl = Label(window, text='No subreddit selected', font=("Arial Bold", 25))
 lbl.grid(column=0, row=0)
