@@ -10,6 +10,8 @@
 
 Required additional libraries: PRAW, Requests, and PIL
 
+All icons from Diagona icon set https://p.yusukekamiyamane.com/
+
 ![A meme in r/dankmemes in OpenSnoo](https://i.ibb.co/BZ828Gk/pic-1.jpg)
 
 OpenSnoo is an extremely minimalist yet highly advanced reddit client with image suppport, no useless scrolling, autommatic image resisng and therefore a constant size...etc
