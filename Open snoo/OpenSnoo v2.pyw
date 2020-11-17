@@ -100,7 +100,7 @@ def clicked():
     lbl.configure(text=poop)
     subreddit_true = reddit.subreddit(subreddit)
     LoadedPosts.clear()
-    for submission in subreddit_true.hot(limit=45): #set how many posts you want loaded and if you want new or hot here
+    for submission in subreddit_true.hot(limit=200): #set how many posts you want loaded and if you want new or hot here
         LoadedPosts.append(submission.id)
     
     #load newest submission instantly:
