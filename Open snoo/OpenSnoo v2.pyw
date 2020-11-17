@@ -104,6 +104,7 @@ def clicked():
         LoadedPosts.append(submission.id)
     
     #load newest submission instantly:
+    global image_url_cache
     seperate_for_processing = reddit.submission(id=LoadedPosts.pop(0))
     submission = seperate_for_processing
     if len(submission.title) > 80:
@@ -111,12 +112,14 @@ def clicked():
         postname.configure(text=shortened_name)
     else:
         postname.configure(text=submission.title)
+    image_url_cache = submission.url
     post_text.configure(text=submission.selftext)
     link = seperate_for_processing.url
     ismature.configure(text="SWF")
     if submission.over_18 == True:
         ismature.configure(text="NSWF")
     author.configure(text='u/' + submission.author.name)
+    print(image_url_cache)
 
     #load post comments:
     current_comment_location = 0
@@ -131,8 +134,14 @@ def clicked():
 
     #load image
     if submission.is_self == False:
-        print("is self is fale")
-
+        image_downloaded = requests.get(image_url_cache)
+        img = Image.open(BytesIO(image_downloaded.content))
+        img.thumbnail(size, Image.ANTIALIAS)
+        window.img = ImageTk.PhotoImage(img)
+        canvas.itemconfig(window.imgArea, image = window.img)
+    else:
+         img = image_unavailable
+         canvas.itemconfig(window.imgArea, image = window.img)
 
 def next_post():
     #load newest submission instantly:
@@ -164,8 +173,6 @@ def next_post():
     #instantly load newest comment:
     next_comment_public()
 
-    img = image_unavailable
-
     #load image
     if submission.is_self == False:
         image_downloaded = requests.get(image_url_cache)
@@ -173,6 +180,9 @@ def next_post():
         img.thumbnail(size, Image.ANTIALIAS)
         window.img = ImageTk.PhotoImage(img)
         canvas.itemconfig(window.imgArea, image = window.img)
+    else:
+         img = image_unavailable
+         canvas.itemconfig(window.imgArea, image = window.img)
 
 if run_once == True:
     img = image_unavailable
