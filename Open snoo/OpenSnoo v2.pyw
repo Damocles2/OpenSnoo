@@ -198,7 +198,7 @@ canvas.grid(column=0, row=3)
  
 window.imgArea = canvas.create_image(0, 0, anchor='nw')
 
-imagesprite = canvas.create_image(150,150,image=img)
+imagesprite = canvas.create_image(300,300,image=img)
 
 lbl = Label(window, text='No subreddit selected', font=("Arial Bold", 25))
 lbl.grid(column=0, row=0)
