@@ -10,7 +10,7 @@
 
 Required additional libraries: PRAW, Requests, and PIL
 
-All icons from Diagona icon set https://p.yusukekamiyamane.com/
+Some icons by Yusuke Kamiyamane.
 
 ![A meme in r/dankmemes in OpenSnoo](https://i.ibb.co/BZ828Gk/pic-1.jpg)
 
