@@ -19,6 +19,7 @@
 #V3.0 (Interaction update) features:
 #- Ability to post comments added
 #- Upvote and downvote feature added
+#- Ability to save posts added
 
 #Minor additions:
 #- Random bugfixes
