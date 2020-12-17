@@ -19,7 +19,6 @@
 #V3.0 (Interaction update) features:
 #- Ability to post comments added
 #- Upvote and downvote feature added
-#- Ability to save posts added
 
 #Minor additions:
 #- Random bugfixes
@@ -29,7 +28,6 @@ import praw
 import json
 from PIL import Image, ImageTk
 from io import BytesIO
-from io import StringIO
 import requests
 from PIL import Image
 from tkinter import filedialog as fd
@@ -37,13 +35,10 @@ import datetime
 
 subreddit = "all"
 LoadedPosts = []
-content = ""
-submission = ""
 seperate_for_processing = ''
 comments_loaded = []
 #cache for the back feature
 viewedcache = []
-current_temporary_cache = ""
 current_comment_location = 0
 #loaded items
 old_comments = []
@@ -72,7 +67,7 @@ reddit = praw.Reddit(client_id=client_id_im,
 
 #-------------------setup-------------------
 window = Tk()
-window.title("OpenSnoo v3.0 Alpha release (in dev)")
+window.title("OpenSnoo v3.1.1 Alpha release")
 #------------------imports------------------
 back_ = PhotoImage(file="back.png")
 next_ = PhotoImage(file="next.png")
@@ -84,6 +79,7 @@ save_icon = PhotoImage(file="save.png")
 window.iconbitmap('Logo.ico')
 upvote_ = PhotoImage(file="upvote.png")
 downvote_ = PhotoImage(file="downvote.png")
+comment__ = PhotoImage(file="comment.png")
 
 #----------------definitions----------------
 def back():
@@ -171,6 +167,10 @@ def clicked():
     the_time_to_set = datetime.datetime.fromtimestamp(ts)
     ismature.configure(text=the_time_to_set)
 
+    #finish by fixing window geometry
+    window.geometry("")
+    window.geometry("+%d+%d" % (self.window_start_x, self.window_start_y))
+
 def next_post():
     global submission
     #load newest submission instantly:
@@ -218,6 +218,10 @@ def next_post():
     ts = int(submission.created_utc)
     the_time_to_set = datetime.datetime.fromtimestamp(ts)
     time_posted.configure(text=the_time_to_set)
+
+    #finish by fixing window geometry
+    window.geometry("")
+    window.geometry("+%d+%d" % (window_start_x, window_start_y))
 
 def commentfunc():
     comment_inputed = CommentInput.get()
@@ -281,7 +285,7 @@ SubredditInput.grid(column=1, row=1)
 CommentInput = Entry(window,width=25)
 CommentInput.grid(column=1, row=4)
 
-comment_post = Button(window, text="Post comment", command=commentfunc, image = next_, 
+comment_post = Button(window, text="Post comment", command=commentfunc, image = comment__, 
                     compound = LEFT)
 comment_post.grid(column=1, row=5)
 
