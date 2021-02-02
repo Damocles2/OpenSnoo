@@ -109,18 +109,7 @@ def next_comment_public():
 def savepost():
     submission.save()
 
-def clicked():
-
-    #change subreddits and load post ids into list
-    global submission
-    subreddit = SubredditInput.get()
-    poop = 'r/' + subreddit
-    lbl.configure(text=poop)
-    subreddit_true = reddit.subreddit(subreddit)
-    LoadedPosts.clear()
-    for submission in subreddit_true.hot(limit=200): #set how many posts you want loaded and if you want new or hot here
-        LoadedPosts.append(submission.id)
-    
+def get_post():
     #load newest submission instantly:
     global image_url_cache
     seperate_for_processing = reddit.submission(id=LoadedPosts.pop(0))
@@ -171,57 +160,22 @@ def clicked():
     window.geometry("")
     window.geometry("+%d+%d" % (self.window_start_x, self.window_start_y))
 
-def next_post():
+def clicked():
+
+    #change subreddits and load post ids into list
     global submission
-    #load newest submission instantly:
-    global image_url_cache
-    seperate_for_processing = reddit.submission(id=LoadedPosts.pop(0))
-    submission = seperate_for_processing
-    if len(submission.title) > 80:
-        shortened_name = submission.title[:80] + '...'
-        postname.configure(text=shortened_name)
-    else:
-        postname.configure(text=submission.title)
-    image_url_cache = submission.url
-    post_text.configure(text=submission.selftext)
-    link = seperate_for_processing.url
-    ismature.configure(text="SWF")
-    if submission.over_18 == True:
-        ismature.configure(text="NSWF")
-    author.configure(text='u/' + submission.author.name)
-    upvote_ratio.configure(text=submission.score)
-    print(image_url_cache)
+    subreddit = SubredditInput.get()
+    poop = 'r/' + subreddit
+    lbl.configure(text=poop)
+    subreddit_true = reddit.subreddit(subreddit)
+    LoadedPosts.clear()
+    for submission in subreddit_true.hot(limit=200): #set how many posts you want loaded and if you want new or hot here
+        LoadedPosts.append(submission.id)
 
-    #load post comments:
-    current_comment_location = 0
-    comment.configure(text='')
-    comments_loaded.clear()
-    for top_level_comment in seperate_for_processing.comments:
-        current_processed_comment = top_level_comment.body
-        comments_loaded.append(current_processed_comment)
-    
-    #instantly load newest comment:
-    next_comment_public()
+    get_post()
 
-    #load image
-    if submission.is_self == False:
-        image_downloaded = requests.get(image_url_cache)
-        img = Image.open(BytesIO(image_downloaded.content)) #downloads image to virtual file as cache
-        img.thumbnail(size, Image.ANTIALIAS)
-        window.img = ImageTk.PhotoImage(img)
-        canvas.itemconfig(window.imgArea, image = window.img)
-    else:
-         img = image_unavailable
-         canvas.itemconfig(window.imgArea, image = window.img)
-
-    #set time posted
-    ts = int(submission.created_utc)
-    the_time_to_set = datetime.datetime.fromtimestamp(ts)
-    time_posted.configure(text=the_time_to_set)
-
-    #finish by fixing window geometry
-    window.geometry("")
-    window.geometry("+%d+%d" % (window_start_x, window_start_y))
+def next_post():
+    get_post()
 
 def commentfunc():
     comment_inputed = CommentInput.get()
