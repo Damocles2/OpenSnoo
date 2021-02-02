@@ -1,7 +1,9 @@
 # OpenSnoo
 
 ![logo](https://i.ibb.co/VwZpkTM/Opensnoo-logo.png)
-Required additional libraries: PRAW, Requests, and PIL
+Required additional libraries: PRAW, and PIL. All other come standard with Python.
+
+Update: It runs on raspberry pi 3 with amazing performance, yay!
 
 OpenSnoo is an extremely minimalist yet highly advanced reddit client with image suppport, no useless scrolling, autommatic image resisng and therefore a constant size...etc
 
