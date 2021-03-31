@@ -2,7 +2,7 @@
 
 ![logo](https://i.ibb.co/VwZpkTM/Opensnoo-logo.png)
 
-**PS: Make sure to put your api key in the login section at the top before using! Don't have one? Go to https://www.reddit.com/prefs/apps and then and then create new app. Then all you have to do is copy and paste that into the script!**
+**PS: Make sure to put your api key in the script app in json file! Don't have one? Go to https://www.reddit.com/prefs/apps and then and then create new app. Then all you have to do is copy and paste that into the script!**
 
 **Required additional libraries: PRAW, and PIL. All other come standard with Python.**
 
